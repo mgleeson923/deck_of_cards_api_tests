@@ -48,6 +48,8 @@ def test_draw_cards_from_deck():
     player_one_cards = [eval(i) for i in player_one_cards]
     logger.debug(player_one_cards)
     player_one_hand_value = sum(player_one_cards)
+    if player_one_hand_value == 21:
+        print("Blackjack")
     logger.debug(player_one_hand_value)
 
     ## Create player two's hand
@@ -81,4 +83,6 @@ def test_draw_cards_from_deck():
     player_two_cards = [eval(i) for i in player_two_cards]
     logger.debug(player_two_cards)
     player_two_hand_value = sum(player_two_cards)
+    if player_two_hand_value == 21:
+        print("Blackjack")
     logger.debug(player_two_hand_value)
